@@ -1,17 +1,29 @@
-import express from 'express'
-import cors from 'cors'
-import { times } from './bd.js'
+import express, { Router } from 'express'
+
+import { times } from './src/database/bd.js'
+import { classificacaoGeral, melhores8Times } from './src/functions/melhoresTimes.js'
+import { calcularSaldoGols, maiorSaldoGols } from './src/functions/calcularSaldoGols.js'
+import { apresentarTime } from './src/functions/apresentarTime.js'
+import { percentualDesempenho } from './src/functions/percentualDesempenho.js'
 
 const app = express()
-app.use(cors())
+const router = express.Router()
 
 app.get('/', (req, res) => {
   res.send('Hello World')
 }) 
 
-app.get('/times', (req, res) => {
-  res.json(times)
-}) 
+app.get('/melhores8', melhores8Times)
+app.get('/classificacaoGeral', classificacaoGeral)
+app.get('/calcularSaldoGols', calcularSaldoGols)
+app.get('/maiorSaldoGols', maiorSaldoGols)
+app.get('/apresentarTime/:time', (req, res) => {
+    const time = req.params.time;
+    apresentarTime(req, res, time);
+})
+
+app.get('/percentualDesempenho', percentualDesempenho)
+
 
 app.listen(3000, () => {
   console.log('Server is running on http://localhost:3000')

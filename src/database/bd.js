@@ -5,7 +5,7 @@ let times = [
         "pts": 16,
         "pj": 8,
         "vit": 5,
-        "e": 1,
+        "emp": 1,
         "der":2,
         "gm": 16,
         "gc": 10
@@ -16,7 +16,7 @@ let times = [
         "pts": 16,
         "pj": 8,
         "vit": 5,
-        "e": 1,
+        "emp": 1,
         "der":2,
         "gm": 8,
         "gc": 7
@@ -27,7 +27,7 @@ let times = [
         "pts": 16,
         "pj": 8,
         "vit": 4,
-        "e": 4,
+        "emp": 4,
         "der":0,
         "gm": 14,
         "gc": 2
@@ -38,10 +38,10 @@ let times = [
         "pts": 15,
         "pj": 8,
         "vit": 5,
-        "e": 0,
+        "emp": 0,
         "der":3,
         "gm": 11,
-        "gc": 77
+        "gc": 7
     },
     {
         "posicao": 5,
@@ -49,7 +49,7 @@ let times = [
         "pts": 14,
         "pj": 8,
         "vit": 4,
-        "e": 2,
+        "emp": 2,
         "der":2,
         "gm": 10,
         "gc": 6
@@ -60,7 +60,7 @@ let times = [
         "pts": 13,
         "pj": 8,
         "vit": 4,
-        "e": 1,
+        "emp": 1,
         "der":3,
         "gm": 16,
         "gc": 12
@@ -71,7 +71,7 @@ let times = [
         "pts": 13,
         "pj": 8,
         "vit": 4,
-        "e": 1,
+        "emp": 1,
         "der":3,
         "gm": 7,
         "gc": 10
@@ -82,7 +82,7 @@ let times = [
         "pts": 12,
         "pj": 8,
         "vit": 3,
-        "e": 3,
+        "emp": 3,
         "der":2,
         "gm": 12,
         "gc": 7
@@ -93,7 +93,7 @@ let times = [
         "pts": 12,
         "pj": 8,
         "vit": 3,
-        "e": 3,
+        "emp": 3,
         "der":2,
         "gm": 6,
         "gc": 7
@@ -104,7 +104,7 @@ let times = [
         "pts": 11,
         "pj": 8,
         "vit": 3,
-        "e": 2,
+        "emp": 2,
         "der":3,
         "gm": 5,
         "gc": 9
@@ -115,7 +115,7 @@ let times = [
         "pts": 8,
         "pj": 8,
         "vit": 2,
-        "e": 2,
+        "emp": 2,
         "der":4,
         "gm": 10,
         "gc": 8
@@ -126,7 +126,7 @@ let times = [
         "pts": 8,
         "pj": 8,
         "vit": 2,
-        "e": 2,
+        "emp": 2,
         "der":4,
         "gm": 14,
         "gc": 15
@@ -137,7 +137,7 @@ let times = [
         "pts": 8,
         "pj": 8,
         "vit": 2,
-        "e": 2,
+        "emp": 2,
         "der":4,
         "gm": 8,
         "gc": 10
@@ -148,7 +148,7 @@ let times = [
         "pts": 8,
         "pj": 8,
         "vit": 1,
-        "e": 5,
+        "emp": 5,
         "der":2,
         "gm": 11,
         "gc": 11
@@ -159,7 +159,7 @@ let times = [
         "pts": 5,
         "pj": 8,
         "vit": 1,
-        "e": 2,
+        "emp": 2,
         "der":5,
         "gm": 2,
         "gc": 13
@@ -170,7 +170,7 @@ let times = [
         "pts": 1,
         "pj": 8,
         "vit": 0,
-        "e": 1,
+        "emp": 1,
         "der":7,
         "gm": 3,
         "gc": 14
