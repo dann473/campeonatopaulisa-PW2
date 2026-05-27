@@ -1,5 +1,5 @@
 import express, { Router } from 'express'
-
+import cors from 'cors'
 import { times } from './src/database/bd.js'
 import { classificacaoGeral, melhores8Times } from './src/functions/melhoresTimes.js'
 import { calcularSaldoGols, maiorSaldoGols } from './src/functions/calcularSaldoGols.js'
@@ -8,6 +8,10 @@ import { percentualDesempenho } from './src/functions/percentualDesempenho.js'
 
 const app = express()
 const router = express.Router()
+
+app.use(cors({
+    origin: ['http://localhost:5500']
+}));
 
 app.get('/', (req, res) => {
   res.send('Hello World')
