@@ -10,7 +10,7 @@ const app = express()
 const router = express.Router()
 
 app.use(cors({
-    origin: ['http://localhost:5500']
+    origin: ['http://127.0.0.1:5500']
 }));
 
 app.get('/', (req, res) => {
@@ -21,12 +21,26 @@ app.get('/melhores8', melhores8Times)
 app.get('/classificacaoGeral', classificacaoGeral)
 app.get('/calcularSaldoGols', calcularSaldoGols)
 app.get('/maiorSaldoGols', maiorSaldoGols)
+app.get('/percentualDesempenho', percentualDesempenho)
 app.get('/apresentarTime/:time', (req, res) => {
     const time = req.params.time;
     apresentarTime(req, res, time);
 })
 
-app.get('/percentualDesempenho', percentualDesempenho)
+app.post('/incluirTime', (req, res) => {
+    const { nome, pontos, jogos, vitorias, empates, derrotas, golsPro, golsContra } = req.body;
+    res.json({ 
+      message: 'Time incluído com sucesso', 
+      nome, 
+      pontos, 
+      jogos, 
+      vitorias, 
+      empates, 
+      derrotas, 
+      golsPro, 
+      golsContra 
+    });
+})
 
 
 app.listen(3000, () => {
